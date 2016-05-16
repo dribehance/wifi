@@ -25,10 +25,10 @@ var config = {
     },
     vendor: {
         js: [
-            './bower_components/jquery/dist/jquery.js',
-            './bower_components/angular/angular.js',
-            './bower_components/angular-route/angular-route.js',
-            './bower_components/mobile-angular-ui/dist/js/mobile-angular-ui.js'
+            // './bower_components/jquery/dist/jquery.js',
+            // './bower_components/angular/angular.js',
+            // './bower_components/angular-route/angular-route.js',
+            // './bower_components/mobile-angular-ui/dist/js/mobile-angular-ui.js'
         ],
 
         css: {
@@ -145,7 +145,7 @@ gulp.task('images', function() {
 ==================================*/
 
 gulp.task('fonts', function() {
-    return gulp.src(config.vendor.fonts)
+    return gulp.src('src/fonts/**/*')
         .pipe(gulp.dest(path.join(config.dest, 'fonts')));
 });
 
@@ -157,11 +157,19 @@ gulp.task('fonts', function() {
 gulp.task('html', function() {
     var inject = [];
     gulp.src(['src/html/**/*.html'])
-        .pipe(replace('<!-- inject:js -->', inject.join('\n    ')))
         .pipe(gulp.dest(config.dest));
 });
 
-
+gulp.task('templates', function() {
+    var inject = [];
+    gulp.src(['src/templates/**/*.html'])
+        .pipe(gulp.dest(config.dest + "/templates"));
+});
+gulp.task('lib', function() {
+    var inject = [];
+    gulp.src(['src/lib/**/*'])
+        .pipe(gulp.dest(config.dest + "/lib"));
+});
 /*======================================================================
 =            Compile, minify, mobilize less                            =
 ======================================================================*/
@@ -182,13 +190,13 @@ gulp.task('less', function() {
         }))
         .pipe(mobilizer('app.css', {
             'app.css': {
-                hover: 'exclude',
+                // hover: 'exclude',
                 screens: ['0px']
             },
-            'hover.css': {
-                hover: 'only',
-                screens: ['0px']
-            }
+            // 'hover.css': {
+            //     hover: 'only',
+            //     screens: ['0px']
+            // }
         }))
         .pipe(cssmin())
         .pipe(rename({
@@ -209,10 +217,10 @@ gulp.task('js', function() {
                 objectMode: true
             },
             gulp.src(config.vendor.js),
-            gulp.src('./src/js/**/*.js').pipe(ngFilesort()),
-            gulp.src(['src/templates/**/*.html']).pipe(templateCache({
-                module: 'Nearby'
-            }))
+            gulp.src('./src/js/**/*.js').pipe(ngFilesort())
+            // gulp.src(['src/templates/**/*.html']).pipe(templateCache({
+            //     module: 'Nearby'
+            // }))
         )
         .pipe(sourcemaps.init())
         .pipe(concat('app.js'))
@@ -236,7 +244,9 @@ gulp.task('watch', function() {
     }
     gulp.watch(['./src/html/**/*'], ['html']);
     gulp.watch(['./src/less/**/*'], ['less']);
-    gulp.watch(['./src/js/**/*', './src/templates/**/*', config.vendor.js], ['js']);
+    gulp.watch(['./src/js/**/*'], ['js']);
+    gulp.watch(['./src/templates/**/*'], ['templates']);
+    gulp.watch(['./src/lib/**/*'], ['lib']);
     gulp.watch(['./src/images/**/*'], ['images']);
 });
 
@@ -246,7 +256,7 @@ gulp.task('watch', function() {
 ======================================*/
 
 gulp.task('build', function(done) {
-    var tasks = ['html', 'fonts', 'images', 'less', 'js'];
+    var tasks = ['html', 'templates', 'lib', 'fonts', 'images', 'less', 'js'];
     seq('clean', tasks, done);
 });
 
