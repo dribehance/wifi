@@ -1,6 +1,7 @@
 // by dribehance <dribehance.kksdapp.com>
 angular.module("Server", [
 		"ngRoute",
+		// "ngSanitize",
 		"LocalStorageModule",
 		// "flow",
 		// "timer"
