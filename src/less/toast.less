@@ -1,0 +1,38 @@
+.overlay(@color: black) {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: fade(@color, 50%);
+    z-index: 1000;
+}
+
+.toast {
+    .overlay(white);
+    display: none;
+    .loader {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-left: -25px;
+        margin-top: -25px;
+        height: 50px;
+        width: 50px;
+        background-image: url("../images/loader.gif");
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+}
+
+.error-msg {
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
+    padding: 15px;
+    width: 200px;
+    z-index: 1000;
+    background-color: fade(black, 50%);
+    color: white;
+    display: none;
+}
