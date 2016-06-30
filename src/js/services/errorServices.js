@@ -1,5 +1,5 @@
 // by dribehance <dribehance.kksdapp.com>
-angular.module("Skillopedia").factory("errorServices", function($rootScope, $timeout, toastServices) {
+angular.module("Server").factory("errorServices", function($rootScope, $timeout, toastServices) {
 	return {
 		show: function(error) {},
 		hide: function() {},

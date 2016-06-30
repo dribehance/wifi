@@ -1,4 +1,4 @@
-angular.module("Skillopesia").directive('imageview', function() {
+angular.module("Server").directive('imageview', function() {
 	return {
 		restrict: 'E',
 		scope: {

@@ -1,5 +1,5 @@
 // by dribehance <dribehance.kksdapp.com>
-angular.module("Skillopedia").factory("userServices", function($rootScope, $http, apiServices, localStorageService, config) {
+angular.module("Server").factory("userServices", function($rootScope, $http, apiServices, localStorageService, config) {
 	return {
 		// rsa encrypt
 		rsa_key: apiServices._get(angular.extend({}, config.common_params, {

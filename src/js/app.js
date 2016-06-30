@@ -1,5 +1,5 @@
 // by dribehance <dribehance.kksdapp.com>
-angular.module("Skillopedia", [
+angular.module("Server", [
 		"ngRoute",
 		// "mobile-angular-ui",
 		// "mobile-angular-ui.core",

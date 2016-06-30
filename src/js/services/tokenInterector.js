@@ -1,5 +1,5 @@
 // by dribehance <dribehance.kksdapp.com>
-angular.module("Skillopedia").factory("tokenInterceptor", function($location, $q, localStorageService, errorServices, config) {
+angular.module("Server").factory("tokenInterceptor", function($location, $q, localStorageService, errorServices, config) {
 	return {
 		// optional method
 		'request': function(config) {

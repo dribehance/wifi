@@ -1,5 +1,5 @@
 // by dribehance <dribehance.kksdapp.com>
-angular.module("Skillopedia").directive('onload', function() {
+angular.module("Server").directive('onload', function() {
 	return {
 		restrict: 'A',
 		link: function(scope, element, attrs) {

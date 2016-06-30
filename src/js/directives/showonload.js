@@ -1,4 +1,4 @@
-angular.module("Skillopedia").directive('showOnLoaded', function() {
+angular.module("Server").directive('showOnLoaded', function() {
 	return {
 		link: function(scope, element, attrs) {
 			$(element).css({

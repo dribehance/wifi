@@ -1,5 +1,5 @@
 // by dribehance <dribehance.kksdapp.com>
-angular.module("Skillopedia").directive('dribehanceHeader', function() {
+angular.module("Server").directive('dribehanceHeader', function() {
 	return {
 		restrict: 'E',
 		templateUrl: "templates/header.html",

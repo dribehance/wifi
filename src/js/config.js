@@ -1,4 +1,4 @@
-angular.module("Skillopedia").constant("config", {
+angular.module("Server").constant("config", {
 	url: "http://",
 	imageUrl: "http://",
 	request: {

@@ -1,5 +1,5 @@
 // by dribehance <dribehance.kksdapp.com>
-angular.module("Skillopedia").directive('errSrc', function() {
+angular.module("Server").directive('errSrc', function() {
 	return {
 		restrict: 'A',
 		link: function(scope, element, attrs) {

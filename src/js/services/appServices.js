@@ -1,6 +1,6 @@
  // by dribehance <dribehance.kksdapp.com>
  // EventHandle
- angular.module("Skillopedia").factory("appServices", function($rootScope, $window, $location, errorServices, toastServices) {
+ angular.module("Server").factory("appServices", function($rootScope, $window, $location, errorServices, toastServices) {
  	var routeChangeStart = function(e) {
  		// do something white routechangestart,eg:
  		// toastServices.show();

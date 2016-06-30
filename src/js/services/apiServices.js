@@ -1,9 +1,9 @@
 // by dribehance <dribehance.kksdapp.com>
-angular.module("Skillopedia").factory("apiServices", function($http) {
+angular.module("Server").factory("apiServices", function($http) {
 	return {
 		_get: function(request) {
 			return function(input) {
-				$http({
+				return $http({
 					// by dribehance <dribehance.kksdapp.com>
 					url: request.url,
 					method: "GET",
@@ -15,7 +15,7 @@ angular.module("Skillopedia").factory("apiServices", function($http) {
 		},
 		_post: function(request) {
 			return function(input) {
-				$http({
+				return $http({
 					// by dribehance <dribehance.kksdapp.com>
 					url: request.url,
 					method: "POST",
