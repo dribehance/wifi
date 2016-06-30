@@ -1,8 +1,6 @@
 // by dribehance <dribehance.kksdapp.com>
 angular.module("Server", [
 		"ngRoute",
-		// "mobile-angular-ui",
-		// "mobile-angular-ui.core",
 		"LocalStorageModule",
 		// "flow",
 		// "timer"
