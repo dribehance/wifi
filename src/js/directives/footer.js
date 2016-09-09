@@ -1,5 +1,5 @@
 // by dribehance <dribehance.kksdapp.com>
-angular.module("Server").directive('dribehanceFooter', function() {
+angular.module("Wifi").directive('dribehanceFooter', function() {
 	return {
 		restrict: 'E',
 		templateUrl: "templates/footer.html",

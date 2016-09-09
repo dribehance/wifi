@@ -1,5 +1,5 @@
 // by dribehance <dribehance.kksdapp.com>
-angular.module("Server").directive('mobilepicker', function($timeout) {
+angular.module("Wifi").directive('mobilepicker', function($timeout) {
 	return {
 		restrict: 'E',
 		scope: {

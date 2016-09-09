@@ -1,5 +1,5 @@
 // by dribehance <dribehance.kksdapp.com>
-angular.module("Server").factory("facebookServices", function($rootScope, $route, $http, $window, $location, $q, userServices, toastServices, errorServices, localStorageService, config) {
+angular.module("Wifi").factory("facebookServices", function($rootScope, $route, $http, $window, $location, $q, userServices, toastServices, errorServices, localStorageService, config) {
     $window.fbAsyncInit = function() {
         var FB = $window.FB || undefined;
         if (!FB) return;

@@ -1,0 +1,23 @@
+<div class="wrap">
+    <div class="trial-logo">
+        <imageview data-rate="333/94" src="'../images/logo_1.png'"></imageview>
+    </div>
+    <form class="trial-section" name="trial-form" ng-submit="ajaxForm()">
+        <div class="trial-input">
+            <input type="tel" class="form-control full-width" name="telephone" required ng-model="input.telephone" placeholder="请输入手机号">
+            <span class="icon icon-user"></span>
+        </div>
+        <div class="trial-input">
+            <div class="col-xs-7">
+                <input type="tel" class="form-control full-width" name="smscode" required ng-model="input.smscode" placeholder="请输入验证码">
+            </div>
+            <div class="col-xs-offset-1 col-xs-4">
+                <button class="btn btn-primary full-width">验证码</button>
+            </div>
+            <span class="icon icon-smscode"></span>
+        </div>
+        <div class="trial-input">
+            <button type="submit" class="btn btn-primary full-width">游客试用</button>
+        </div>
+    </form>
+</div>

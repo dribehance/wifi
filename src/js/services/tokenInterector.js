@@ -1,5 +1,5 @@
 // by dribehance <dribehance.kksdapp.com>
-angular.module("Server").factory("tokenInterceptor", function($location, $q, localStorageService, errorServices, config) {
+angular.module("Wifi").factory("tokenInterceptor", function($location, $q, localStorageService, errorServices, config) {
 	return {
 		// optional method
 		'request': function(config) {

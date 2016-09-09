@@ -1,6 +1,8 @@
 // ---------------------------------------reset
 body {
 	font-family: Helvetica,Droidsansfallback,Dengxian, "微软雅黑","Heiti SC";
+	font-size: @font-size-base;
+	line-height: @line-height-base;
 }
 a {
     .link();
@@ -9,15 +11,18 @@ a {
 .wrap {
 	position: relative;
 	width: 100%;
-	max-width: 1160px;
-	padding:15px;
+	max-width: 640px;
 	margin: auto auto;
+	// padding:15px;
 	.box-sizing(border-box);
 }
 // ---------------------------------------until
 .full-width {
     width: 100%;
     .box-sizing(border-box)
+}
+.block {
+	display: block;
 }
 .text-ellipsis,.text-overflow {
     .text-overflow();

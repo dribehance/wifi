@@ -1,5 +1,5 @@
 // by dribehance <dribehance.kksdapp.com>
-angular.module("Server").factory("userServices", function($rootScope, $http, apiServices, localStorageService, config) {
+angular.module("Wifi").factory("userServices", function($rootScope, $http, apiServices, localStorageService, config) {
 	return {
 		// rsa encrypt
 		rsa_key: apiServices._get(angular.extend({}, config.common_params, {

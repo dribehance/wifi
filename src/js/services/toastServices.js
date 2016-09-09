@@ -1,5 +1,5 @@
 // by dribehance <dribehance.kksdapp.com>
-angular.module("Server").factory("toastServices", function() {
+angular.module("Wifi").factory("toastServices", function() {
 	return {
 		show: function() {
 			$(".toast").show();

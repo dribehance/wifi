@@ -1,5 +1,5 @@
 // by dribehance <dribehance.kksdapp.com>
-angular.module("Server", [
+angular.module("Wifi", [
 		"ngRoute",
 		// "ngSanitize",
 		"LocalStorageModule",

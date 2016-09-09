@@ -1,4 +1,4 @@
-angular.module("Server").constant("config", {
+angular.module("Wifi").constant("config", {
 	url: "http://",
 	imageUrl: "http://",
 	request: {
@@ -10,6 +10,8 @@ angular.module("Server").constant("config", {
 	},
 	common_params: {},
 	interceptor: [
-		"index"
+		"index",
+		"trial",
+		"tring"
 	]
 });

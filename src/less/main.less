@@ -1,0 +1,82 @@
+.portal-section {
+    position: relative;
+    .portal-content {
+        position: absolute;
+        top: 0px;
+        left: 0;
+        right: 0;
+        padding: 15px;
+        color: white;
+        > .btn {
+            border-radius: 5px;
+            border: 1px solid white;
+            margin-bottom: 15px;
+        }
+    }
+    .or {
+        position: relative;
+        text-align: center;
+        font-size: 12px;
+        &:before {
+            content: "";
+            position: relative;
+            display: inline-block;
+            top: -4px;
+            left: -10px;
+            width: 80px;
+            height: 1px;
+            background-color: white;
+        }
+        &:after {
+            content: "";
+            position: relative;
+            display: inline-block;
+            top: -4px;
+            left: 10px;
+            width: 80px;
+            height: 1px;
+            background-color: white;
+        }
+    }
+}
+
+.logo {
+    display: block;
+    width: 200px;
+    margin: 30px auto;
+}
+
+.trial-logo {
+    display: block;
+    width: 230px;
+    margin: 50px auto;
+}
+
+.ad-section {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.trial-section {
+    position: relative;
+    display: block;
+    padding: 15px;
+    .trial-input {
+        position: relative;
+        margin-bottom: 20px;
+        overflow: hidden;
+        input {
+            padding: 23px 23px 23px 35px;
+        }
+        button {
+            padding: 12px;
+        }
+        .icon {
+            position: absolute;
+            top: 8px;
+            left: 2px;
+        }
+    }
+}

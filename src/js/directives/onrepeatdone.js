@@ -1,4 +1,4 @@
-angular.module("Server").directive('onRepeatDone', function() {
+angular.module("Wifi").directive('onRepeatDone', function() {
 	return {
 		restrict: 'A',
 		link: function(scope, el, attr) {

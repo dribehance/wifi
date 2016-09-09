@@ -1,5 +1,5 @@
 // by dribehance <dribehance.kksdapp.com>
-angular.module("Server").directive('dribehanceHeader', function() {
+angular.module("Wifi").directive('dribehanceHeader', function() {
 	return {
 		restrict: 'E',
 		templateUrl: "templates/header.html",

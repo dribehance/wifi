@@ -1,5 +1,5 @@
 // by dribehance <dribehance.kksdapp.com>
-angular.module("Server").factory("apiServices", function($http) {
+angular.module("Wifi").factory("apiServices", function($http) {
 	return {
 		_get: function(request) {
 			return function(input) {
