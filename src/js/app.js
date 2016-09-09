@@ -40,5 +40,5 @@ angular.module("Server", [
 
 	}).run(function(appServices) {
 		// init event such as routechangestart...
-		// appServices.init();
+		appServices.init();
 	});

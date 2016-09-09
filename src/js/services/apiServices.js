@@ -3,6 +3,9 @@ angular.module("Server").factory("apiServices", function($http) {
 	return {
 		_get: function(request) {
 			return function(input) {
+				if (request.token !== undefined) {
+					request.token = localStorageService.get("token")
+				}
 				return $http({
 					// by dribehance <dribehance.kksdapp.com>
 					url: request.url,
@@ -15,6 +18,9 @@ angular.module("Server").factory("apiServices", function($http) {
 		},
 		_post: function(request) {
 			return function(input) {
+				if (request.token !== undefined) {
+					request.token = localStorageService.get("token")
+				}
 				return $http({
 					// by dribehance <dribehance.kksdapp.com>
 					url: request.url,

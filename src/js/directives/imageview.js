@@ -8,7 +8,7 @@ angular.module("Server")
 			controller: function($scope, $element, $attrs) {
 				$scope.bg_image = "../images/default.png";
 				$scope.rate = parseFloat($attrs.rate);
-				$scope.width = $element.width() || $(window).width();
+				$scope.width = $element.parent().width() || $(window).width();
 				$scope.height = $scope.width / $scope.rate;
 				if (!$scope.rate) {
 					console.log("unexpect rate")
@@ -28,6 +28,10 @@ angular.module("Server")
 				}
 
 				function calculate_center_image_size_on_loaded(e) {
+					$(e.target).css({
+						width: 'auto',
+						height: 'auto'
+					})
 					var image_loaded = $(e.target),
 						image_loaded_width = image_loaded.width(),
 						image_loaded_height = image_loaded.height(),
@@ -67,14 +71,14 @@ angular.module("Server")
 					if (actural_rate < $scope.rate) {
 						image_loaded.css({
 							"display": "inline-block",
-							"height": "auto",
-							"width": "100%"
+							"height": "100%",
+							"width": "auto"
 						})
 					} else {
 						image_loaded.css({
 							"display": "inline-block",
-							"height": "100%",
-							"width": "auto"
+							"height": "auto",
+							"width": "100%"
 						})
 					}
 					image_loaded.parent().css({
@@ -101,12 +105,10 @@ angular.module("Server")
 					"background-image": "url(" + scope.bg_image + ")",
 					"background-position": "center center",
 					"background-repeat": "no-repeat",
-					"height": scope.height
+					"height": scope.height,
+					"overflow": "hidden"
 				}
 				$(element).css(style);
-				$(element).parent().css({
-					overflow: "hidden"
-				});
 			}
 		};
 	})

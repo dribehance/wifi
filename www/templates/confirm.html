@@ -1,0 +1,18 @@
+<div class="confirm-box">
+    <div class="confirm-body">
+        <div class="confirm-header">
+            {{confirm.title}}
+            <i class="pull-right fa fa-times close" ng-click="confirm.cancel()"></i>
+        </div>
+        <div class="confirm-content" ng-if="confirm.content_type !='input'">
+            {{confirm.content}}
+        </div>
+        <div class="confirm-content" ng-if="confirm.content_type =='input'">
+            <input type="text" class="form-control full-width" ng-model="confirm.content" placeholder="....">
+        </div>
+        <div class="confirm-footer">
+            <span class="btn btn-default" ng-click="confirm.cancel()">cancel</span>
+            <span class="btn btn-primary" ng-click="confirm.ok()">ok</span>
+        </div>
+    </div>
+</div>
