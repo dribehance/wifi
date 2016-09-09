@@ -1,4 +1,4 @@
-# server
+# WIFI
 web server
-服务器，用于简单的代码部署
+智能wifi，免费wifi连接
 启动服务器：gulp 
